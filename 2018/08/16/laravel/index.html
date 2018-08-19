@@ -8,12 +8,12 @@
   <meta name="viewport"
         content="width=device-width, initial-scale=1.0, user-scalable=no">
   <title>
-    voice-aid 更加自动化 | Borankux
+    Laravel | Borankux
   </title>
   <meta name="description" content="My local blog">
   
   <meta name="keywords" content="
-  tools,voice,speech
+  laravel,php,composer,数据库
   ">
   
   <meta name="author" content="mirzatsoft@gmail.com">
@@ -127,19 +127,15 @@
     <i class="fa fa-user-o"></i>
     mirzatsoft@gmail.com
 
-    <span class="post-date float-right" title="{{moment(1534402761000).format('MMM DD, YYYY, h:mm:ss A')}}">
+    <span class="post-date float-right" title="{{moment(1534352686000).format('MMM DD, YYYY, h:mm:ss A')}}">
       <i class="fa fa-pencil-square-o"></i>
-      {{moment(1534402761000).fromNow()}}
+      {{moment(1534352686000).fromNow()}}
     </span>
   </h3>
 
   <article class="post-content">
-    <h1>voice-aid 更加自动化</h1>
-    <ol>
-<li>自动检测coverage进行coverage 总结</li>
-<li>监听日志变化</li>
-<li>自动清理日志</li>
-</ol>
+    <h1>Laravel</h1>
+    <p>先看看一些简单的代码：<br><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">### /bootstrap/app.php</span></span><br><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line"></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">|--------------------------------------------------------------------------</span></span><br><span class="line"><span class="comment">| Create The Application</span></span><br><span class="line"><span class="comment">|--------------------------------------------------------------------------</span></span><br><span class="line"><span class="comment">|</span></span><br><span class="line"><span class="comment">| The first thing we will do is create a new Laravel application instance</span></span><br><span class="line"><span class="comment">| which serves as the "glue" for all the components of Laravel, and is</span></span><br><span class="line"><span class="comment">| the IoC container for the system binding all of the various parts.</span></span><br><span class="line"><span class="comment">|</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"></span><br><span class="line">$app = <span class="keyword">new</span> Illuminate\Foundation\Application(</span><br><span class="line">    realpath(<span class="keyword">__DIR__</span>.<span class="string">'/../'</span>)</span><br><span class="line">);</span><br><span class="line"></span><br><span class="line">$app-&gt;singleton(</span><br><span class="line">    Illuminate\Contracts\Http\Kernel::class,</span><br><span class="line">    App\Http\Kernel::class</span><br><span class="line">);</span><br><span class="line"></span><br><span class="line">$app-&gt;singleton(</span><br><span class="line">    Illuminate\Contracts\Console\Kernel::class,</span><br><span class="line">    App\Console\Kernel::class</span><br><span class="line">);</span><br><span class="line"></span><br><span class="line">$app-&gt;singleton(</span><br><span class="line">    Illuminate\Contracts\Debug\ExceptionHandler::class,</span><br><span class="line">    App\Exceptions\Handler::class</span><br><span class="line">);</span><br><span class="line"></span><br><span class="line"><span class="keyword">return</span> $app;</span><br></pre></td></tr></table></figure></p>
 
   </article>
 </div>
